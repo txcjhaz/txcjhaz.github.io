@@ -69,6 +69,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-每日流水账——19-06-29" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/29/每日流水账——19-06-29/" class="article-date">
+  <time datetime="2019-06-29T01:41:28.000Z" itemprop="datePublished">2019-06-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/29/每日流水账——19-06-29/">每日流水账——19-06-29</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/29/每日流水账——19-06-29/" data-id="cjxgv10tt0004rwua4l0c4ij4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/流水账/">流水账</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-每日流水账——19-06-28" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/28/每日流水账——19-06-28/" class="article-date">
@@ -94,11 +132,26 @@
         <h2 id="为什么架构如此重要？"><a href="#为什么架构如此重要？" class="headerlink" title="为什么架构如此重要？"></a>为什么架构如此重要？</h2><p>应用程序有两个层面的要求。第一类是<strong>功能性</strong>需求，这些需求决定一个应用程序做什么。而应用的架构其实跟这些功能性需求没什么关系。功能性需求可以通过任意的架构来实现，甚至是非常糟糕的大泥球架构。架构的重要性在于，它帮助应用程序满足了第二类需求：<strong>非功能性</strong>需求（有时也称为质量属性需求）。这些非功能需求决定一个应用程序在运行时的质量，比如可扩展性和可靠性。它们也决定了开发阶段的质量，包括可维护性、可测试性、可扩展性和可部署性。为应用程序所选择的架构将决定这些质量属性。</p>
 <h2 id="架构的风格"><a href="#架构的风格" class="headerlink" title="架构的风格"></a>架构的风格</h2><h4 id="六边形架构"><a href="#六边形架构" class="headerlink" title="六边形架构"></a>六边形架构</h4><p><img src="https://anmous.oss-cn-shanghai.aliyuncs.com/%E5%85%AD%E8%BE%B9%E5%BD%A2%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC.jpg" alt></p>
 <p>六边形架构是分层架构风格的替代品，如上图所示，六边形架构风格选择以业务逻辑为中心的方式组织逻辑视图。应用程序具有一个或多个入站适配器，而不是表示层，它通过调用业务逻辑来处理外部的请求。同样，应用程序具有一个或多个出站适配器，而不是数据持久层，这些出站适配器由业务逻辑调用并调用外部应用程序。此架构的一个关键特性和优点是业务逻辑不依赖于适配器。相反，各种适配器都依赖业务逻辑。</p>
+<h4 id="松耦合"><a href="#松耦合" class="headerlink" title="松耦合"></a>松耦合</h4><p>微服务架构最核心特性是服务之间的松耦合性。服务之间的交互采用API完成，这样做就封装了服务的实现细节。这允许服务再不影响客户端的情况下，对实现方式做出修改。松耦合服务是改善开发效率、提升可维护性和可测试性的关键。小的、松耦合的服务更容易被理解、修改和测试。</p>
+<h2 id="为应用程序定义微服务架构"><a href="#为应用程序定义微服务架构" class="headerlink" title="为应用程序定义微服务架构"></a>为应用程序定义微服务架构</h2><h4 id="系统操作"><a href="#系统操作" class="headerlink" title="系统操作"></a>系统操作</h4><p>系统操作是应用程序必须处理的请求的一种抽象表述。它可以是更新数据的命令，也可以是检索数据的查询。</p>
+<h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><ul>
+<li>将应用程序的需求提炼为各种关键请求（使用系统操作）</li>
+<li>确定如何分解服务（定义与业务能力相对应的服务或围绕领域驱动设计的子域来分解和设计服务）</li>
+<li>确定每个服务的API</li>
+</ul>
+<h5 id="识别系统操作"><a href="#识别系统操作" class="headerlink" title="识别系统操作"></a>识别系统操作</h5><p>第一步创建由关键类组成的抽象领域模型，这些关键类提供用于描述系统操作的词汇。第二步确定系统操作，并根据领域模型描述每个系统操作的行为。</p>
+<p>领域模型主要源自用户故事中提及的名词，系统操作主要来自于用户故事中提及的动词。</p>
+<h5 id="创建抽象领域模型"><a href="#创建抽象领域模型" class="headerlink" title="创建抽象领域模型"></a>创建抽象领域模型</h5><h5 id="定义系统操作"><a href="#定义系统操作" class="headerlink" title="定义系统操作"></a>定义系统操作</h5><h4 id="服务分解的障碍"><a href="#服务分解的障碍" class="headerlink" title="服务分解的障碍"></a>服务分解的障碍</h4><ul>
+<li>网络延时</li>
+<li>服务之间的同步通信降低了可用性</li>
+<li>跨服务的数据一致性</li>
+<li>上帝类（可以使用领域驱动设计消除）</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/每日流水账——19-06-28/" data-id="cjxfwqjef0002v8ualsf9pec0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/每日流水账——19-06-28/" data-id="cjxgv10tq0002rwua3rhe0nqv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/流水账/">流水账</a></li></ul>
@@ -137,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/test-article/" data-id="cjxfwqjed0001v8ual9adicrd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/test-article/" data-id="cjxgv10tp0001rwuaotux8p19" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test-tag/">test_tag</a></li></ul>
@@ -188,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/hello-world/" data-id="cjxfwqje90000v8uaa4ai3ao3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/hello-world/" data-id="cjxgv10tl0000rwuawqeemh4b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +274,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/test-tag/" style="font-size: 10px;">test_tag</a> <a href="/tags/流水账/" style="font-size: 10px;">流水账</a>
+      <a href="/tags/test-tag/" style="font-size: 10px;">test_tag</a> <a href="/tags/流水账/" style="font-size: 20px;">流水账</a>
     </div>
   </div>
 
@@ -241,6 +294,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/06/29/每日流水账——19-06-29/">每日流水账——19-06-29</a>
+          </li>
         
           <li>
             <a href="/2019/06/28/每日流水账——19-06-28/">每日流水账——19-06-28</a>
